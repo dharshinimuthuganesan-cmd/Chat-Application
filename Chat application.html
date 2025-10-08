@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Chat App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="chat-app">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="profile-section">
+        <img src="https://th.bing.com/th/id/OIP.-3LM7jMY38D_UGeyta0DXgHaHa?w=190&h=191&c=7&r=0&o=7&cb=12&dpr=1.4&pid=1.7&rm=3" alt="Profile" class="profile-img">
+        <div class="profile-info">
+          <h3>John Doe</h3>
+          <span class="status online">Online</span>
+        </div>
+        <div class="profile-actions">
+          <i class="fas fa-cog" title="Settings"></i>
+          <i class="fas fa-bell notification-icon" title="Notifications">
+            <span class="notification-badge">3</span>
+          </i>
+        </div>
+      </div>
+      
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search contacts..." class="search-input">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+      
+      <div class="contacts-list" id="contacts-list">
+        <!-- Contacts will be populated by JS -->
+      </div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area">
+      <div class="chat-header">
+        <div class="chat-contact-info">
+          <img src="https://th.bing.com/th?q=Contact+Logo+Pic&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.4&pid=InlineBlock&rm=3&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Contact" class="contact-avatar">
+          <div>
+            <h4 id="active-contact-name">Select a contact</h4>
+            <span id="active-contact-status" class="contact-status">Click on a contact to start chatting</span>
+          </div>
+        </div>
+        <div class="chat-actions">
+          <i class="fas fa-video" title="Video Call"></i>
+          <i class="fas fa-phone" title="Voice Call"></i>
+          <i class="fas fa-ellipsis-v" title="More Options"></i>
+        </div>
+      </div>
+      
+      <div class="chat-window" id="chat-window">
+        <div class="welcome-message">
+          <i class="fas fa-comments"></i>
+          <h3>Welcome to ChatApp</h3>
+          <p>Select a contact to start messaging</p>
+        </div>
+      </div>
+      
+      <div class="chat-input-area">
+        <div class="emoji-panel" id="emoji-panel">
+          <div class="emoji-grid">
+            😀 😃 😄 😁 😆 😅 😂 🤣 😊 😇 🙂 🙃 😉 😌 😍 🥰 😘 😗 😙 😚 😋 😛 😝 😜 🤪 🤨 🧐 🤓 😎 🤩 🥳 😏 😒 😞 😔 😟 😕 🙁 ☹️ 😣 😖 😫 😩 🥺 😢 😭 😤 😠 😡 🤬 🤯 😳 🥵 🥶 😱 😨 😰 😥 😓 🤗 🤔 🤭 🤫 🤥 😶 😐 😑 😬 🙄 😯 😦 😧 😮 😲 🥱 😴 🤤 😪 😵 🤐 🥴 🤢 🤮 🤧 😷 🤒 🤕 🤑 🤠 😈 👿 👹 👺 🤡 💩 👻 💀 ☠️ 👽 👾 🤖 🎃 😺 😸 😹 😻 😼 😽 🙀 😿 😾
+          </div>
+        </div>
+        
+        <div class="input-container">
+          <button class="emoji-btn" id="emoji-btn">😊</button>
+          <input type="text" id="message-input" placeholder="Type a message..." class="message-input">
+          <button id="send-btn" class="send-btn">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
